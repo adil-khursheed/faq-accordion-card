@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--soft-violet), var(--soft-blue));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    max-width: 1000px;
+    background: #fff url(images/bg-pattern-desktop.svg) no-repeat;
+    background-position: -550px -290px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 5rem;
+    border-radius: 20px;
+}
+
+.img-col{
+    position: relative;
+}
+
+.woman-illustration{
+    background: url(images/illustration-woman-online-desktop.svg) no-repeat;
+    height: 100%;
+    background-position: -80px center;
+}
+
+.box{
+    position: absolute;
+    top: 42%;
+    left: -90px;
+
+}
+
+.text-col{
+    padding: 4rem 6rem 4rem 0;
+    max-width: 550px;
+}
+
+.title{
+    margin-bottom: 2rem;
+}
+
+.query-section{
+    max-width:380px;
+}
+
+.question-answer-section{
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7.4rem;
+    /* margin-bottom: 0.7rem; */
+    cursor: pointer;
+}
+
+.question p{
+    color: var(--very-dark-grayish-blue);
+    font-size: 0.88rem;
+}
+
+.question p:hover,
+.question p:active{
+    color: var(--soft-red);
+}
+
+.answer p{
+    color: var(--dark-grayish-blue);
+    font-size: 0.8rem;
+}
+
+.answer{
+    display: none;
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--light-grayish-blue);
+    margin-top: 1rem;
+}
+
+.attribution a { 
+    color: var(--light-grayish-blue);
+}
