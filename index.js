@@ -1,10 +1,9 @@
-const question = document.querySelectorAll(".question");
-const answer = document.querySelectorAll(".answer");
-const arrowIcon = document.querySelectorAll(".arrow-icon");
+const questions = document.querySelectorAll(".question-answer-section");
+const text = document.querySelector(".ques-text");
 
-question.forEach((e) => {
-    e.addEventListener("click", () => {
-        // console.log("clicked");
-        answer.style.display = "block";
+questions.forEach((question) => {
+    question.addEventListener("click", () => {
+        question.classList.toggle("active");
+        // text.style.fontWeight = "700";
     })
 })
