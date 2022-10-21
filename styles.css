@@ -79,8 +79,8 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 7.4rem;
-    /* margin-bottom: 0.7rem; */
     cursor: pointer;
+    /* margin-bottom: 0.7rem; Added through JS */ 
 }
 
 .question p{
