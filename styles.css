@@ -76,7 +76,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* gap: 7.4rem; */
 }
 
 .question p{
@@ -92,13 +91,17 @@ body{
 .answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1s ease;
+    transition: max-height 0.8s ease;
 }
 
 .answer p{
     color: var(--dark-grayish-blue);
     font-size: 0.8rem;
     margin-top: 0.6rem;
+}
+
+.question-answer-section.active .question p{
+    font-weight: 700;
 }
 
 .question-answer-section.active .answer{
