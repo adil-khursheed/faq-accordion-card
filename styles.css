@@ -27,6 +27,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 1.5rem;
 }
 
 .container{
@@ -39,20 +40,20 @@ body{
     border-radius: 20px;
 }
 
-.img-col{
-    position: relative;
-}
-
 .woman-illustration{
     background: url(images/illustration-woman-online-desktop.svg) no-repeat;
     height: 100%;
     background-position: -80px center;
 }
 
+.woman-illustration img{
+    display: none;
+}
+
 .box{
     position: absolute;
-    top: 42%;
-    left: -90px;
+    top: 41%;
+    left: 110px;
 
 }
 
@@ -136,5 +137,52 @@ body{
     to{
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+
+@media only screen and (max-width: 900px){
+
+    body{
+        padding: 10rem 1.5rem;
+    }
+
+    .container{
+        background: #fff url(images/bg-pattern-mobile.svg) no-repeat;
+        background-position: 50% 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr;
+        gap: 2rem;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .woman-illustration img{
+        display: block;
+        max-width: 300px;
+        height: 100%;
+        position: absolute;
+        left: 16%;
+        top: -54%;
+    }
+
+    .woman-illustration{
+        background: none;
+    }
+
+    .box{
+        display: none;
+    }
+
+    .text-col{
+        padding: 2rem;
+        max-width: 550px;
+    }
+
+    .title{
+        margin-bottom: 2rem;
+        text-align: center;
     }
 }
