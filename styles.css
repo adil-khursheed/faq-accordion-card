@@ -20,7 +20,6 @@
 }
 
 body{
-    width: 100vw;
     min-height: 100vh;
     background: linear-gradient(180deg, var(--soft-violet), var(--soft-blue));
     display: flex;
@@ -35,26 +34,32 @@ body{
     background: #fff url(images/bg-pattern-desktop.svg) no-repeat;
     background-position: -550px -290px;
     display: grid;
-    grid-template-columns: 400px 1fr;
-    gap: 5rem;
+    grid-template-columns: 450px 1fr;
+    gap: 3rem;
     border-radius: 20px;
+    position: relative;
 }
 
-.woman-illustration{
-    background: url(images/illustration-woman-online-desktop.svg) no-repeat;
-    height: 100%;
-    background-position: -80px center;
+.img-col{
+    position: relative;
+    overflow: hidden;
 }
 
-.woman-illustration img{
+.woman-desktop{
+    position: absolute;
+    top: 50px;
+    left: -65px;
+}
+
+.woman-mobile{
     display: none;
 }
 
 .box{
     position: absolute;
-    top: 41%;
-    left: 110px;
-
+    bottom: 220px;
+    left: -180px;
+    transform: translate(50%,50%);
 }
 
 .text-col{
@@ -145,12 +150,12 @@ body{
 @media only screen and (max-width: 900px){
 
     body{
-        padding: 10rem 1.5rem;
+        padding: 10rem 0.8rem;
     }
 
     .container{
         background: #fff url(images/bg-pattern-mobile.svg) no-repeat;
-        background-position: 50% 20px;
+        background-position: 50% 5px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 100px 1fr;
@@ -159,17 +164,23 @@ body{
         position: relative;
     }
 
-    .woman-illustration img{
-        display: block;
-        max-width: 300px;
-        height: 100%;
-        position: absolute;
-        left: 16%;
-        top: -54%;
+    .img-col{
+        position: relative;
+        overflow: visible;
     }
 
-    .woman-illustration{
-        background: none;
+    .woman-desktop{
+        display: none;
+    }
+
+    .woman-mobile{
+        display: block;
+        position: absolute;
+        top: -110px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 250px;
+        width: 100%;
     }
 
     .box{
@@ -182,7 +193,7 @@ body{
     }
 
     .title{
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         text-align: center;
     }
 }
